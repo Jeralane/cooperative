@@ -14,7 +14,7 @@ class CreateMembers < ActiveRecord::Migration
       t.string :business
       t.decimal :income
       t.string :spouse_occupation
-      t.decimal :spouse_income
+      t.decimal :spouse_salary
       t.string :spouse_business
       t.decimal :spouse_income
 

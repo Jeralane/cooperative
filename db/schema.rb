@@ -59,4 +59,27 @@ ActiveRecord::Schema.define(version: 20140408170855) do
 
   add_index "contacts", ["member_id"], name: "index_contacts_on_member_id", using: :btree
 
+  create_table "members", force: true do |t|
+    t.integer  "contact_id"
+    t.string   "code"
+    t.string   "name"
+    t.string   "membership_type"
+    t.date     "membership_date"
+    t.date     "pmes_date"
+    t.date     "closed_date"
+    t.boolean  "closed_account"
+    t.string   "occupation"
+    t.decimal  "salary",            precision: 10, scale: 0
+    t.string   "business"
+    t.decimal  "income",            precision: 10, scale: 0
+    t.string   "spouse_occupation"
+    t.decimal  "spouse_salary",     precision: 10, scale: 0
+    t.string   "spouse_business"
+    t.decimal  "spouse_income",     precision: 10, scale: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "members", ["contact_id"], name: "index_members_on_contact_id", using: :btree
+
 end
