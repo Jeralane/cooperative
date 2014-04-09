@@ -1,5 +1,5 @@
 class CreateAddresses < ActiveRecord::Migration
-  def change
+  def up
     create_table :addresses do |t|
       t.integer :contact_id
       t.string :street
@@ -13,5 +13,10 @@ class CreateAddresses < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index(:addresses, :contact_id)
+  end
+
+  def down
+    drop_table :addresses
   end
 end
