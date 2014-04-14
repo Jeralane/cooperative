@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140408170855) do
+ActiveRecord::Schema.define(version: 20140414113240) do
 
   create_table "addresses", force: true do |t|
     t.integer  "contact_id"
@@ -81,5 +81,11 @@ ActiveRecord::Schema.define(version: 20140408170855) do
   end
 
   add_index "members", ["contact_id"], name: "index_members_on_contact_id", using: :btree
+
+  create_table "membership_types", force: true do |t|
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

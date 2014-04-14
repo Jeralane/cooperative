@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th><%= f.label(:code, "Code") %></th>
+    <td><%= f.text_field(:code) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:name, "Name") %></th>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:membership_type, "Membership Type") %></th>
+    <td><%= f.select(:membership_type, @membership_types.collect {|mt| [mt.description]}) %> </td>
+  </tr>
+</table>
+

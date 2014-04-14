@@ -2,8 +2,9 @@ Cooperative::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-
-  match ':controller(/:action(/:id))', :via => :get
+  #resource :members
+  
+  match ':controller(/:action(/:id))', :via => [:get, :post]
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

@@ -1,0 +1,11 @@
+<h2>Create Member</h2>
+
+<%= form_for(:member, :url => {:action => 'create'}) do |f| %>
+  <%= render(:partial => "form", :locals => {:f => f}) %>
+
+  <div>
+    <%= submit_tag("Create Subject") %>
+  </div>
+
+<% end %>
+

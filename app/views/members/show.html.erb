@@ -1,0 +1,17 @@
+<%= link_to("<< Back to list", :action => 'index') %>
+<h2>Show Member</h2>
+<table>
+  <tr>
+    <th>Code</th>
+    <td><%= @member.code %></td>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <td><%= @member.name %></td>
+  </tr>
+  <tr>
+    <th>Type</th>
+    <td><%= @member.membership_type %></td>
+  </tr>
+</table>
+
